@@ -9,7 +9,7 @@
 }
 /*-              LAYOUT             -*/
 .container {
-    width: 90%;
+    max-width: 100%;
     margin-left: 1.5rem;
     margin-right: 1.5rem;
 }
@@ -29,6 +29,7 @@
     padding: 2.5rem 0;
 }
 
+
 #header {
     border-bottom: 1px solid #dfcfcf;
     margin-bottom: 2rem;
@@ -40,9 +41,15 @@
     top: 0;
     left: 0;
 }
+
+#header.scroll {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  }
+
 #home {
     overflow: hidden;
     max-width: 100%;
+    height: auto;
 }
 #home .container {
     margin: 0;
@@ -53,7 +60,7 @@
 #home .image img {
     position: relative;
     right: 2.9rem;
-    max-width: 650px;
+    max-width: 100%;
     border-radius: 0.25rem;
     margin-bottom: 2rem;
 }
@@ -81,6 +88,23 @@
 #home .text p {
     margin-bottom: 2rem;
 }
+
+#home .button {
+    background-color: red;
+    color: var(--title-color);
+    text-decoration: none;
+    padding: 0.75rem;
+    justify-content: center;
+    display: inline-block;
+    border-radius: 0.35rem;
+}
+#divider-1 {
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(270deg, rgba(255, 0, 0, 0.562), rgba(243, 223, 223, 0.658));
+}
+
 body {
     background-color: rgb(255, 240, 240);
     font: 400 1rem 'DM Sans', sans-serif;
@@ -94,11 +118,12 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 }
 
 footer {
     padding: 20px;
-    text-align: center;
+    justify-content: center;
     bottom: 100%;
 }
 
