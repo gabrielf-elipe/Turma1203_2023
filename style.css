@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+/*-         variables         -*/
+:root {
+    --hue: 159
+    --title-color: hsl(var(--hue) 41% 10%);
+}
+/*-              LAYOUT             -*/
+.container {
+    width: 90%;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+.grid {
+    display: grid;
+    gap: 2rem
+}
+.logo {
+    text-decoration: none;
+    font: 400 1.31rem 'Typeface Mario 64', sans-serif;
+    color: var(--title-color);
+}
+.logo span {
+    color: rgb(158, 10, 10);
+}
+.section {
+    padding: 2.5rem 0;
+}
+
+#header {
+    border-bottom: 1px solid #dfcfcf;
+    margin-bottom: 2rem;
+    display: flex;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    background-color: rgb(255, 240, 240);
+    top: 0;
+    left: 0;
+}
+#home {
+    overflow: hidden;
+    max-width: 100%;
+}
+#home .container {
+    margin: 0;
+}
+#home .image {
+    position: relative;
+}
+#home .image img {
+    position: relative;
+    right: 2.9rem;
+    max-width: 650px;
+    border-radius: 0.25rem;
+    margin-bottom: 2rem;
+}
+
+#home .image::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: red;
+    position: absolute;
+    top: -16.5%;
+    left: 16.7%;
+    z-index: 0;
+    border-radius: 0.25rem;
+}
+#home .text {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    text-align: center;
+}
+#home .text h1{
+    margin-bottom: 1rem;
+}
+
+#home .text p {
+    margin-bottom: 2rem;
+}
+body {
+    background-color: rgb(255, 240, 240);
+    font: 400 1rem 'DM Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+main {
+    margin-top: 4.5rem;
+}
+nav{
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    bottom: 100%;
+}
+
+footer p {
+    margin: 0;
+    color: #333;
+}
+
+/* Animação smooth ao descer */
+html {
+    scroll-behavior: smooth;
+}
