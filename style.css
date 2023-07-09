@@ -23,11 +23,18 @@
     color: var(--title-color);
 }
 .logo span {
-    color: rgb(158, 10, 10);
+    color: rgba(160, 16, 16, 0.863)
 }
 .section {
-    padding: 2.5rem 0;
+    padding: 4rem 0;
 }
+
+div.swiper-button-prev , div.swiper-button-next{
+    color: rgba(119, 7, 7, 0.877);
+    width: 1rem;
+  
+}
+
 
 
 #header {
@@ -40,12 +47,16 @@
     background-color: rgb(255, 240, 240);
     top: 0;
     left: 0;
+    transition: box-shadow 0.3s ease;
 }
 
-#header.scroll {
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
-  }
+.scroll-header.shadow {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
+#header i{
+    color: rgba(160, 16, 16, 0.863)
+}
 #home {
     overflow: hidden;
     max-width: 100%;
@@ -61,7 +72,7 @@
     position: relative;
     right: 2.9rem;
     max-width: 100%;
-    border-radius: 0.25rem;
+    border-radius: 0.3rem;
     margin-bottom: 2rem;
 }
 
@@ -69,28 +80,28 @@
     content: '';
     height: 100%;
     width: 100%;
-    background: red;
+    background: rgba(160, 16, 16, 0.863);
     position: absolute;
     top: -16.5%;
     left: 16.7%;
     z-index: 0;
-    border-radius: 0.25rem;
+    border-radius: 0.3rem;
 }
-#home .text {
+.text {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
     text-align: center;
 }
-#home .text h1{
+.text h1{
     margin-bottom: 1rem;
 }
 
-#home .text p {
+.text p {
     margin-bottom: 2rem;
 }
 
 #home .button {
-    background-color: red;
+    background-color: rgba(160, 16, 16, 0.863);
     color: var(--title-color);
     text-decoration: none;
     padding: 0.75rem;
@@ -98,11 +109,48 @@
     display: inline-block;
     border-radius: 0.35rem;
 }
+
+#home .button:hover {
+    background-color: rgba(129, 10, 10, 0.884);
+    transition: ease 0.3s;
+}
 #divider-1 {
     display: inline-block;
     width: 100%;
     height: 1px;
     background: linear-gradient(270deg, rgba(255, 0, 0, 0.562), rgba(243, 223, 223, 0.658));
+}
+
+#teams .cards {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    
+}
+
+#teams .cards .swiper-slide {
+    height: 372px;
+    padding: 2rem;
+    background-color: rgb(255, 243, 243);
+    box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0.082);
+    border-bottom: 0.25rem solid rgba(243, 223, 223, 0.767);
+    text-align: center;
+}
+
+#teams .cards .card img{
+    border-radius: 0.25rem;
+}
+
+#teams .cards .card p{
+    text-align: center;
+    position: relative;
+}
+
+#teams h1 {
+    font: 400 1.31rem 'Typeface Mario 64', sans-serif;
+}
+
+#teams div span.swiper-pagination-bullet {
+    background-color: rgba(119, 7, 7, 0.877);
 }
 
 body {
@@ -113,13 +161,56 @@ body {
 main {
     margin-top: 4.5rem;
 }
-nav{
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+  
+a {
+    text-decoration: none;
+}
+  
+nav {
     height: 4.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
 }
+
+nav.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    width: 100%;
+}
+
+nav .options {
+    opacity: 0;
+    visibility: hidden; 
+    transition: .2s;
+}
+
+
+nav .options ul {
+    display: none;
+}
+
+
+
+nav i.fa-solid.fa-xmark{
+    position: absolute;
+
+    visibility: hidden;
+    opacity: 0;
+  
+    transition: .3s;
+}
+
+
 
 footer {
     padding: 20px;

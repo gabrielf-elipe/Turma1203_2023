@@ -1,11 +1,12 @@
-function changeHeaderAfterScroll() {
-    const header = document.querySelector('#header')
-    const navHeight = header.offsetHeight
+window.addEventListener('scroll', function() {
+  var header = document.querySelector('.scroll-header');
+  var scrollPosition = window.scrollY;
   
-    window.addEventListener('scroll', () => {
-      window.scrollY >= navHeight
-        ? header.classList.add('scroll')
-        : header.classList.remove('scroll')
-    })
+  if (scrollPosition > 0) {
+    header.classList.add('shadow');
+  } else {
+    header.classList.remove('shadow');
   }
-  changeHeaderAfterScroll() 
+});
+
+
